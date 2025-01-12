@@ -1,0 +1,16 @@
+{
+    "name": "Perfect FOV",
+    "description": "Custom FOV, but with actual values instead of a multiplier.\nReplaces the vanilla FOV slider.\n\nShoutouts to -Gesicht- for the original CustomFOV mod and all the people who've been fixing it over the years!",
+    "author": "AuriRex",
+    "contact": "Discord: aurirex",
+    "version": "1.0",
+    "image" : "icon.dds",
+	"color" : "0.62 0 0.72",
+    "priority": 10,
+    "blt_version": 2,
+    "hooks": [{
+            "hook_id": "lib/managers/menumanager",
+            "script_path": "lua/init.lua"
+        }
+    ]
+}
