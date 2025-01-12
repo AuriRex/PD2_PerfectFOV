@@ -1,7 +1,13 @@
+<p align="center">
+  <img src="https://github.com/AuriRex/PD2_PerfectFOV/blob/master/_icon/thumbnail_600x300.png" alt="PerfectFOV Thumbnail"/>
+</p>
+
 # Perfect FOV
 
 A `Payday 2` mod that **replaces** the default percentage based FOV slider with one that shows actual values.  
 Also lets your choose a higher or lower FOV than the vanilla game allows.
+
+![](https://github.com/AuriRex/PD2_PerfectFOV/blob/master/_icon/banner_775x125.gif)
 
 ## Shoutouts to ...
 
