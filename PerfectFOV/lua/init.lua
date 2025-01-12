@@ -43,7 +43,7 @@ Hooks:PostHook(MenuOptionInitiator, "modify_video", "PerfectFOVChangeBaseGameSel
     log("[PerfectFOV] Menu setup thingie uwu")
 
     function MenuCallbackHandler:on_change_fov_value(pfov_item)
-		local fov_value = pfov_item:value()
+        local fov_value = pfov_item:value()
 
         -- we doin' some string math TM :sunglasses:
         fov_value = tonumber(string.format("%.1f", fov_value))
@@ -51,30 +51,30 @@ Hooks:PostHook(MenuOptionInitiator, "modify_video", "PerfectFOVChangeBaseGameSel
         pfov_item:set_value(fov_value)
 
         PerfectFOV:ApplyFOV(fov_value)
-	end
+    end
 
     local fov_multiplier_item_params = fov_multiplier_item:parameters()
 
     local params = {
-		name = "pfov_value",
-		text_id = fov_multiplier_item_params.text_id,
-		help_id = fov_multiplier_item_params.help_id,
-		callback = "on_change_fov_value",
-		filter = false
-	}
+        name = "pfov_value",
+        text_id = fov_multiplier_item_params.text_id,
+        help_id = fov_multiplier_item_params.help_id,
+        callback = "on_change_fov_value",
+        filter = false
+    }
 
     node:delete_item("fov_multiplier")
 
-	local data_node = {
-		type = "CoreMenuItemSlider.ItemSlider",
-		show_value = true,
-		min = MINIMUM_FOV,
-		max = MAXIMUM_FOV,
-		step = 0.1,
+    local data_node = {
+        type = "CoreMenuItemSlider.ItemSlider",
+        show_value = true,
+        min = MINIMUM_FOV,
+        max = MAXIMUM_FOV,
+        step = 0.1,
         decimal_count = 1
-	}
+    }
 
-	local pfov_item = node:create_item(data_node, params)
-	pfov_item:set_value(PerfectFOV:GetCurrentFOV() or GAME_DEFAULT_FOV)
-	node:insert_item(pfov_item, 6)
+    local pfov_item = node:create_item(data_node, params)
+    pfov_item:set_value(PerfectFOV:GetCurrentFOV() or GAME_DEFAULT_FOV)
+    node:insert_item(pfov_item, 6)
 end)
